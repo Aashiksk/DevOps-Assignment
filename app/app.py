@@ -13,7 +13,7 @@ def home():
 def health():
     return jsonify({
         "status": "healthy",
-        "message": "Application is running"
+        "message": "App is running"
     })
 
 if __name__ == "__main__":
