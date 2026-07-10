@@ -21,8 +21,13 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           script: |
             cd /home/ubuntu/devops-assignment
-            git pull origin main
+
+            git fetch origin
+            git reset --hard origin/main
+
             source venv/bin/activate
+
             pip install -r requirements.txt
+            
             sudo systemctl restart gunicorn
             sudo systemctl status gunicorn --no-pager
