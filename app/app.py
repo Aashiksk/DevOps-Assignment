@@ -6,14 +6,14 @@ app = Flask(__name__)
 def home():
     return """
     <h1>DevOps Technical Assignment</h1>
-    <p>Application is running successfully!</p>
+    <p>App is running successfully!</p>
     """
 
 @app.route("/health")
 def health():
     return jsonify({
         "status": "healthy",
-        "message": "App is running"
+        "message": "Application is running"
     })
 
 if __name__ == "__main__":
